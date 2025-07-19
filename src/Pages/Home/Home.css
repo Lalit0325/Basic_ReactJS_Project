@@ -1,0 +1,26 @@
+button {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #6E6D70;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+    color: #DFDEDF;
+    touch-action: manipulation;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.main-container {
+
+    margin-top: 20px;
+    gap: 20px;
+    padding: 2px;
+}
+
+.tile-view-container {
+    display: flex;
+    flex-direction: row;
+
+}

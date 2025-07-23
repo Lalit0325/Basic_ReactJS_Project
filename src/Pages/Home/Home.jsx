@@ -7,7 +7,7 @@ const cardData = [{
         image: "https://i.pinimg.com/originals/71/28/3b/71283bb49db55cfee5bb6acd1389c465.jpg",
         alt: "Tree Image",
         title: "Java Tree",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
     },
     {
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjZZG3bRAxFdAIvNZwIQWllddg7SK3wbgv4MxZadqx4Mw1en_8rIMT1jIpAGz8D4MBiFM&usqp=CAU",

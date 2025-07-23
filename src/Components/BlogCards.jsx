@@ -3,7 +3,6 @@ import './BlogCards.css'
 
 function BlogCards(props) {
     console.log(props);
-    console.log(props.viewType);
     
     return (
         <>

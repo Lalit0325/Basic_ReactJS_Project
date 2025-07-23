@@ -1,6 +1,8 @@
 
 img{
     width: 100px;
+    border-radius: 4px;
+
 }
 
 .card-content
@@ -9,11 +11,32 @@ img{
 }
 .card-container
 {
+    height: 200px;
     display: flex;
     gap: 20px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    padding: 2px;
+    padding: 5px;
     margin-top: 20px;   
     background-color: bisque; 
 }
 
+.desc
+{
+    overflow-y: auto;
+    overflow-x:hidden; 
+    height:120px;
+    padding: 3px;
+    scrollbar-width: thin;         /* For Firefox */
+    scrollbar-color: #f3700c #e0e0e0;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}

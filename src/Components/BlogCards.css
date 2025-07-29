@@ -23,10 +23,11 @@ img{
 .desc
 {
     overflow-y: auto;
+    position: relative;
     overflow-x:hidden; 
     height:120px;
     padding: 3px;
-    scrollbar-width: thin;         /* For Firefox */
+    scrollbar-width: thin;
     scrollbar-color: #f3700c #e0e0e0;
 }
 

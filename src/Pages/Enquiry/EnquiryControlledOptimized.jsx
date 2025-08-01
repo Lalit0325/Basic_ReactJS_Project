@@ -11,17 +11,17 @@ function EnquiryControlledOptimized() {
     }
 
     try {
-           const response = await   fetch("https://jsonplaceholder.typicode.com/posts",{
-              method:'POST',
-              headers:{
-                CLIENT_ID: "ABCD1234",
-              },
-              body: JSON.stringify(enquiryFormData),
-             })
-             const result = await response.json();
-               console.log('Server Response:', result);
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: 'POST',
+        headers: {
+          CLIENT_ID: "ABCD1234",
+        },
+        body: JSON.stringify(enquiryFormData),
+      })
+      const result = await response.json();
+      console.log('Server Response:', result);
     } catch (error) {
-           console.error('Submission failed:', error);
+      console.error('Submission failed:', error);
     }
     console.log("Submitted Data: ", enquiryFormData);
   }
@@ -29,6 +29,8 @@ function EnquiryControlledOptimized() {
     name: "",
     email: "",
     message: "",
+    enqDept: "",
+    othdept: "",
   }
   const [enquiryFormData, setEnquiryFormData] = useState(userObjData);
   const [nameError, setNameError] = useState(false);
@@ -76,6 +78,22 @@ function EnquiryControlledOptimized() {
     if (message.length >= 10 && message.length <= 300) return true
     return false
   }
+
+  const deptChangeHandler=(e)=>
+  {
+     const value=e.target.value;
+     setEnquiryFormData({ ...enquiryFormData, enqDept: value });
+     
+     console.log(value);
+     
+  }
+  const othDeptChangeHandler=(e)=>
+  {
+    const value=e.target.value;
+    setEnquiryFormData({ ...enquiryFormData, othdept: value });
+     
+     console.log(value);
+  }
   return (
     <>
       <h1 style={{ textAlign: 'center', color: 'green' }}>Enquiry Form</h1>
@@ -115,6 +133,30 @@ function EnquiryControlledOptimized() {
               id="message" />
             {messageError && <span style={{ color: 'red' }}>Required, Min 10 and max 300 characters</span>}
           </div><br></br>
+
+          <div>
+            <label htmlFor='enqdept'>Enquiry Department</label>
+            <select id='enqdept'value={enquiryFormData.enqDept} onChange={deptChangeHandler}>
+              <option value="" disabled>Select Departments</option>
+              <option value="hr">HR</option>
+              <option value="sales">Sales</option>
+              <option value="it">IT</option>
+              <option value="admin">Admin</option>
+              <option value="other">Other</option>
+            </select>
+            {enquiryFormData.enqDept==='other' && 
+            <div>
+              <input
+              onChange={othDeptChangeHandler}
+              name='othdept'
+              id='othdept'
+              value={enquiryFormData.othdept}
+              />
+            </div>
+            }
+          </div>
+           
+          <br></br>
           <input type='submit' />
         </form>
       </div>

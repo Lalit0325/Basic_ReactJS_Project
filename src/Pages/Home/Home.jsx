@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogCards from '../../Components/BlogCards'
 import './Home.css'
 
@@ -26,11 +26,18 @@ function Home() {
     const [viewType, setViewType]=useState('Tile');
     const clickHandler=()=>
     {
-        if(viewType==='Tile')
-            setViewType('List')
-        if(viewType!=='Tile')
-            setViewType('Tile')
+        setViewType(prev => (prev === 'Tile' ? 'List' : 'Tile'));
     }
+
+  useEffect(()=>{
+    fetch("/userData.json",{
+
+    }).then(res=>res.json())
+    .then(data=>console.log(data)
+    ).catch((error) => {
+        console.error('Error loading JSON:', error);
+      });
+  },[viewType])
     return (
         <>
             

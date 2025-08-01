@@ -15,13 +15,13 @@ function App() {
 
   return (
    <>
-     {/* <Home/> */}
+     <Home/>
      {/* <Skills/> */}
      {/* <Portfolio/> */}
      {/* <Enquiry/> */}
      {/* <EnquiryControlled/> */}
      {/* <EnquiryUnctontrolled/> */}
-     <EnquiryControlledOptimized/>
+     {/* <EnquiryControlledOptimized/> */}
    </>
   )
 }
